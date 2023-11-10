@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .div1{
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .div1::before,
+        .div1::after{
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            animation: item 1500ms infinite linear;
+        }
+
+        .div1::before{
+            top: -5px;
+            left: -5px;
+            border-top: 1px solid;
+            border-left: 1px solid;
+        }
+
+        .div1::after{
+            right: -5px;
+            bottom: -5px;
+            border-bottom: 1px solid;
+            border-right: 1px solid;
+        }
+
+        @keyframes item {
+            0%{
+                width: 30px;
+                height: 30px;
+            }
+
+            50%{
+                width: calc(100% + 9px);
+                height: calc(100% + 9px);
+            }
+
+            100%{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+            fasds
+    </div>
+</body>
+</html>
